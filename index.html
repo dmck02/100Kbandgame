@@ -1,0 +1,222 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#101019"><title>100K — Build the Ultimate Band</title><style>
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#f7f6ff;background:#0c0d16}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 0,#292144 0,transparent 60%),#0c0d16}button{font:inherit;cursor:pointer}button:focus-visible{outline:3px solid #e4bdff;outline-offset:3px}.wrap{max-width:880px;margin:auto;padding:20px 16px 55px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px}.logo{font-size:30px;font-weight:1000;letter-spacing:-2px}.logo span{color:#c8a4ff}.chip{background:#292638;border:1px solid #514765;padding:8px 12px;border-radius:100px;color:#e9dfff;font-size:12px}.hero{text-align:center;padding:32px 8px 23px}.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:11px;color:#c8a4ff;font-weight:800}.hero h1{font-size:clamp(32px,7vw,57px);letter-spacing:-2px;line-height:1.05;margin:12px 0}.hero p{color:#b8b3c9;max-width:540px;margin:12px auto;line-height:1.5}.panel{background:#191924;border:1px solid #393444;border-radius:22px;padding:20px;margin:16px 0;box-shadow:0 12px 30px #0003}.sectionhead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}.sectionhead h2{margin:0;font-size:22px}.muted{color:#aaa4b8}.progress{display:flex;gap:7px;margin:18px 0 23px}.progress i{display:block;flex:1;height:7px;border-radius:9px;background:#3c354b}.progress i.done{background:#a77bff}.progress i.active{background:#e5caff}.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.choice{min-height:78px;border:1px solid #4a4356;background:#242332;border-radius:14px;padding:13px 12px;text-align:left;color:white;transition:.12s}.choice:hover{background:#302c42}.choice.selected{border:2px solid #cba8ff;background:#392e50;padding:12px 11px}.choice strong{display:block;font-size:15px;line-height:1.3}.choice small{display:block;margin-top:5px;color:#b9b0c7;font-size:12px;line-height:1.3}.choice.selected small{color:#e4d3ff}.action{background:linear-gradient(135deg,#b58aff,#8e5ae6);color:#170c25;font-weight:850;border:0;border-radius:14px;padding:15px 22px;width:100%;margin-top:17px}.action:disabled{background:#4b4656;color:#928b9f;cursor:not-allowed}.secondary{background:#302b3c;color:#eee5fa;border:1px solid #554a67}.lineup{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}.slot{border:1px solid #494154;background:#24212f;border-radius:12px;padding:11px 7px;text-align:center;min-height:87px}.slot .role{font-size:10px;text-transform:uppercase;color:#ba9bea;letter-spacing:.6px}.slot .name{font-size:12px;font-weight:750;margin-top:8px;overflow-wrap:anywhere}.slot .band{font-size:10px;color:#b4aebd;margin-top:3px}.empty{color:#777080!important}.hidden{display:none!important}.ticket{font-size:clamp(43px,11vw,83px);font-weight:950;letter-spacing:-4px;text-align:center;margin:8px 0}.meter{height:18px;border-radius:30px;background:#3b3549;overflow:hidden}.fill{height:100%;width:0%;background:linear-gradient(90deg,#7654d4,#cda6ff);border-radius:30px;transition:width 1s}.center{text-align:center}.bigtitle{font-size:29px;font-weight:900;letter-spacing:-.7px}.breakdown{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:18px 0}.stat{background:#252232;border-radius:12px;padding:13px}.stat b{display:block;font-size:19px;margin-top:5px}.stat span{font-size:12px;color:#b6acc4}.note{font-size:12px;color:#938da2;line-height:1.6;margin-top:20px}.introsteps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0}.introsteps div{background:#242130;border-radius:12px;padding:14px 10px;font-size:13px;color:#d5cce1;text-align:center}.introsteps b{display:block;font-size:20px;color:#d8baff;margin-bottom:4px}.tag{border:1px solid #594b6b;border-radius:30px;padding:5px 10px;color:#cfb9ed;font-size:11px;white-space:nowrap}.footer{text-align:center;color:#716b80;font-size:11px;margin:30px 0}.confetti{font-size:34px}@media(max-width:520px){.wrap{padding:14px 12px 35px}.panel{padding:15px;border-radius:17px}.choice{min-height:77px;padding:11px 10px}.choice strong{font-size:13px}.choice small{font-size:11px}.choice.selected{padding:10px 9px}.lineup{grid-template-columns:repeat(3,1fr)}.sectionhead h2{font-size:19px}.introsteps{gap:6px}.introsteps div{font-size:11px;padding:11px 5px}}
+</style></head><body><main class="wrap"><header class="top"><div class="logo">100<span>K</span><span style="font-size:13px;letter-spacing:0;margin-left:8px;color:#d0c6db">ULTIMATE BAND</span></div><div class="chip">🏟️ 100,000 SEATS</div></header><section id="intro" class="hero"><div class="eyebrow">The ultimate supergroup challenge</div><h1>Can your band<br>sell out a stadium?</h1><p>Draft a vocalist, guitarist, bassist, drummer and wildcard. Pick one from 10 random musicians each round. Your ratings are secret until the final concert.</p><div class="introsteps"><div><b>5</b>band members</div><div><b>10</b>choices per round</div><div><b>100K</b>tickets to sell</div></div><button class="action" id="start">🎸 Build My Band</button><p id="bestIntro" class="muted" style="font-size:13px"></p></section><section id="game" class="hidden"><div class="panel"><div class="sectionhead"><div><div class="eyebrow" id="roundLabel">ROUND 1 OF 5</div><h2 id="roundTitle">Choose your vocalist</h2></div><span class="tag" id="poolLabel">10 random choices</span></div><div class="progress" id="progress"></div><div class="choices" id="choices"></div><button class="action" id="confirm" disabled>Lock in musician →</button></div><div class="panel"><div class="sectionhead"><h2>Your band</h2><span class="tag" id="countLabel">0 / 5 selected</span></div><div class="lineup" id="lineup"></div></div></section><section id="result" class="hidden"><div class="panel"><div class="center"><div class="eyebrow">YOUR CONCERT RESULTS</div><div id="outcome" class="bigtitle" style="margin-top:12px"></div><div class="ticket" id="tickets"></div><div class="muted">tickets sold / 100,000</div></div><div class="meter" style="margin-top:20px"><div class="fill" id="fill"></div></div><p class="center" id="attendanceText"></p><div class="breakdown"><div class="stat"><span>Stadium filled</span><b id="percent"></b></div><div class="stat"><span>Personal best</span><b id="bestResult"></b></div><div class="stat"><span>Genre fit</span><b id="genreResult"></b></div><div class="stat"><span>Band chemistry</span><b id="chemResult"></b></div></div><button class="action" id="again">🔄 Play Again</button><button class="action secondary" id="share">📋 Copy My Band & Score</button></div><div class="panel"><div class="sectionhead"><h2>Your supergroup</h2></div><div class="lineup" id="resultLineup"></div></div></section><p class="footer">Fan-made music game. Rankings are not shown. Ticket sales are fictional game scores, not concert forecasts. No affiliation with Rolling Stone.</p></main><script>
+'use strict';
+// Format: name | best-known act | game popularity (hidden) | genre. Ratings are editorial game values, not Rolling Stone scores.
+const raw={
+vocals:`Freddie Mercury|Queen|99|rock
+Aretha Franklin|Aretha Franklin|94|soul
+Whitney Houston|Whitney Houston|97|pop
+Sam Cooke|Sam Cooke|88|soul
+Billie Holiday|Billie Holiday|82|jazz
+Mariah Carey|Mariah Carey|96|pop
+Stevie Wonder|Stevie Wonder|94|soul
+Beyoncé|Beyoncé|99|pop
+Mick Jagger|The Rolling Stones|97|rock
+Robert Plant|Led Zeppelin|96|rock
+Adele|Adele|97|pop
+Elvis Presley|Elvis Presley|99|rock
+Michael Jackson|Michael Jackson|100|pop
+Prince|Prince|97|funk
+David Bowie|David Bowie|96|rock
+Paul McCartney|The Beatles|99|rock
+John Lennon|The Beatles|99|rock
+George Michael|George Michael|93|pop
+Elton John|Elton John|98|pop
+Bruce Springsteen|Bruce Springsteen|97|rock
+Kurt Cobain|Nirvana|93|rock
+Stevie Nicks|Fleetwood Mac|95|rock
+Axl Rose|Guns N' Roses|94|rock
+Ozzy Osbourne|Black Sabbath|93|metal
+James Hetfield|Metallica|93|metal
+Amy Winehouse|Amy Winehouse|91|soul
+Janis Joplin|Big Brother and the Holding Company|88|rock
+Tina Turner|Tina Turner|96|rock
+Dolly Parton|Dolly Parton|94|country
+Bob Dylan|Bob Dylan|94|folk
+Frank Sinatra|Frank Sinatra|96|jazz
+Nina Simone|Nina Simone|87|soul
+Rihanna|Rihanna|97|pop
+Taylor Swift|Taylor Swift|100|pop
+Lady Gaga|Lady Gaga|97|pop
+Bruno Mars|Bruno Mars|96|pop
+Harry Styles|Harry Styles|95|pop
+Ed Sheeran|Ed Sheeran|97|pop
+Chris Martin|Coldplay|96|pop
+Bono|U2|96|rock
+Thom Yorke|Radiohead|88|rock
+Dave Grohl|Foo Fighters|94|rock
+Liam Gallagher|Oasis|95|rock
+Noel Gallagher|Oasis|91|rock
+Debbie Harry|Blondie|89|rock
+Celine Dion|Celine Dion|96|pop
+Diana Ross|The Supremes|92|soul
+Sade|Sade|89|soul
+Etta James|Etta James|86|soul
+Patti Smith|Patti Smith|80|rock`,
+guitar:`Jimi Hendrix|The Jimi Hendrix Experience|98|rock
+Jimmy Page|Led Zeppelin|96|rock
+Eric Clapton|Cream|94|rock
+Jeff Beck|The Yardbirds|86|rock
+Keith Richards|The Rolling Stones|96|rock
+Brian May|Queen|94|rock
+David Gilmour|Pink Floyd|93|rock
+Eddie Van Halen|Van Halen|95|rock
+Slash|Guns N' Roses|95|rock
+Carlos Santana|Santana|93|latin
+Prince|Prince|97|funk
+B.B. King|B.B. King|89|blues
+Chuck Berry|Chuck Berry|92|rock
+Stevie Ray Vaughan|Double Trouble|88|blues
+Mark Knopfler|Dire Straits|92|rock
+George Harrison|The Beatles|97|rock
+Pete Townshend|The Who|91|rock
+Kirk Hammett|Metallica|90|metal
+James Hetfield|Metallica|93|metal
+Tony Iommi|Black Sabbath|90|metal
+Angus Young|AC/DC|96|rock
+Malcolm Young|AC/DC|90|rock
+Tom Morello|Rage Against the Machine|87|rock
+John Frusciante|Red Hot Chili Peppers|91|rock
+John Mayer|John Mayer|92|pop
+Jack White|The White Stripes|90|rock
+The Edge|U2|93|rock
+Johnny Marr|The Smiths|87|rock
+Noel Gallagher|Oasis|91|rock
+Lindsey Buckingham|Fleetwood Mac|91|rock
+Alex Lifeson|Rush|84|rock
+Joe Perry|Aerosmith|91|rock
+Duane Allman|The Allman Brothers Band|86|blues
+Derek Trucks|Tedeschi Trucks Band|83|blues
+Ritchie Blackmore|Deep Purple|86|rock
+Steve Vai|Steve Vai|82|rock
+Joe Satriani|Joe Satriani|82|rock
+Yngwie Malmsteen|Yngwie Malmsteen|78|metal
+Dimebag Darrell|Pantera|86|metal
+Kurt Cobain|Nirvana|93|rock
+Jerry Garcia|Grateful Dead|88|rock
+Buddy Guy|Buddy Guy|83|blues
+Sister Rosetta Tharpe|Sister Rosetta Tharpe|81|gospel
+Nile Rodgers|Chic|91|funk
+Tommy Emmanuel|Tommy Emmanuel|79|folk
+Albert King|Albert King|82|blues
+Robert Johnson|Robert Johnson|83|blues
+Brian Setzer|Stray Cats|84|rock
+Nancy Wilson|Heart|86|rock
+John Lennon|The Beatles|99|rock`,
+bass:`James Jamerson|The Funk Brothers|85|soul
+John Entwistle|The Who|89|rock
+Paul McCartney|The Beatles|99|rock
+Jaco Pastorius|Weather Report|80|jazz
+Flea|Red Hot Chili Peppers|94|rock
+Geddy Lee|Rush|86|rock
+Jack Bruce|Cream|85|rock
+Carol Kaye|The Wrecking Crew|83|pop
+Bootsy Collins|Parliament-Funkadelic|88|funk
+Larry Graham|Sly and the Family Stone|84|funk
+John Paul Jones|Led Zeppelin|92|rock
+Sting|The Police|95|rock
+Roger Waters|Pink Floyd|92|rock
+Krist Novoselic|Nirvana|88|rock
+Cliff Burton|Metallica|87|metal
+Robert Trujillo|Metallica|89|metal
+Duff McKagan|Guns N' Roses|89|rock
+Nikki Sixx|Mötley Crüe|88|metal
+Adam Clayton|U2|90|rock
+Peter Hook|Joy Division|85|rock
+Kim Deal|Pixies|84|rock
+Tina Weymouth|Talking Heads|85|rock
+Chris Squire|Yes|84|rock
+Geezer Butler|Black Sabbath|86|metal
+Steve Harris|Iron Maiden|87|metal
+Lemmy|Motörhead|90|metal
+Mike Dirnt|Green Day|88|rock
+Mark Hoppus|Blink-182|88|rock
+Alex James|Blur|85|rock
+John Deacon|Queen|94|rock
+Bill Wyman|The Rolling Stones|89|rock
+Donald Dunn|Booker T. & the M.G.'s|81|soul
+Victor Wooten|Béla Fleck and the Flecktones|79|jazz
+Stanley Clarke|Return to Forever|81|jazz
+Esperanza Spalding|Esperanza Spalding|82|jazz
+Thundercat|Thundercat|83|funk
+Pino Palladino|The Who|84|rock
+Tony Levin|King Crimson|82|rock
+Les Claypool|Primus|83|rock
+Phil Lesh|Grateful Dead|85|rock
+Verdine White|Earth, Wind & Fire|86|funk
+Bernard Edwards|Chic|86|funk
+Aston Barrett|Bob Marley and the Wailers|83|reggae
+Paul Simonon|The Clash|85|rock
+Mani|The Stone Roses|84|rock
+Andy Rourke|The Smiths|84|rock
+Michael Anthony|Van Halen|87|rock
+Billy Sheehan|Mr. Big|80|rock
+Nathan East|Fourplay|80|jazz
+Tal Wilkenfeld|Tal Wilkenfeld|77|jazz`,
+drums:`John Bonham|Led Zeppelin|95|rock
+Keith Moon|The Who|91|rock
+Ginger Baker|Cream|87|rock
+Neil Peart|Rush|89|rock
+Hal Blaine|The Wrecking Crew|84|pop
+Ringo Starr|The Beatles|99|rock
+Dave Grohl|Nirvana|94|rock
+Phil Collins|Genesis|95|rock
+Stewart Copeland|The Police|90|rock
+Charlie Watts|The Rolling Stones|95|rock
+Roger Taylor|Queen|94|rock
+Lars Ulrich|Metallica|91|metal
+Travis Barker|Blink-182|92|rock
+Chad Smith|Red Hot Chili Peppers|91|rock
+Taylor Hawkins|Foo Fighters|91|rock
+Bill Ward|Black Sabbath|86|metal
+Nick Mason|Pink Floyd|90|rock
+Mitch Mitchell|The Jimi Hendrix Experience|85|rock
+Buddy Rich|Buddy Rich|86|jazz
+Gene Krupa|Gene Krupa|81|jazz
+Max Roach|Max Roach|82|jazz
+Art Blakey|The Jazz Messengers|81|jazz
+Tony Williams|Miles Davis Quintet|82|jazz
+Elvin Jones|John Coltrane Quartet|82|jazz
+Clyde Stubblefield|James Brown Band|84|funk
+Jabo Starks|James Brown Band|80|funk
+Questlove|The Roots|87|hiphop
+Sheila E.|Sheila E.|86|funk
+Karen Carpenter|The Carpenters|89|pop
+Meg White|The White Stripes|85|rock
+Jack DeJohnette|Keith Jarrett Trio|80|jazz
+Dave Lombardo|Slayer|86|metal
+Joey Jordison|Slipknot|87|metal
+Danny Carey|Tool|85|metal
+Mike Portnoy|Dream Theater|83|metal
+Tommy Lee|Mötley Crüe|89|metal
+Alex Van Halen|Van Halen|90|rock
+Don Henley|Eagles|91|rock
+Levon Helm|The Band|86|rock
+Zigaboo Modeliste|The Meters|80|funk
+Carter Beauford|Dave Matthews Band|84|rock
+Steve Gadd|Steve Gadd|82|jazz
+Vinnie Colaiuta|Frank Zappa|81|rock
+Jeff Porcaro|Toto|86|rock
+Matt Cameron|Pearl Jam|88|rock
+Nicko McBrain|Iron Maiden|85|metal
+Tre Cool|Green Day|88|rock
+Patrick Carney|The Black Keys|85|rock
+Dominic Howard|Muse|87|rock
+Rick Allen|Def Leppard|88|rock`};
+const roles=[['vocals','Vocalist'],['guitar','Guitarist'],['bass','Bassist'],['drums','Drummer'],['wildcard','Wildcard']];
+const pool={};for(const [role,rows] of Object.entries(raw)){pool[role]=rows.split('\n').map(line=>{const [name,band,pop,genre]=line.split('|');return {name,band,pop:Number(pop),genre,role}})}
+const all=[...new Map(Object.values(pool).flat().map(p=>[p.name,p])).values()];
+const $=id=>document.getElementById(id);let round=0,selected=null,options=[],band=[];
+const randomTen=arr=>{let a=[...arr];for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a.slice(0,10)};
+const fmt=n=>Math.round(n).toLocaleString('en-US');
+function best(){try{return Number(localStorage.getItem('ultimate-band-100k-best')||0)}catch{return 0}}
+function saveBest(n){try{localStorage.setItem('ultimate-band-100k-best',String(n))}catch{}}
+function show(id){for(const s of ['intro','game','result'])$(s).classList.toggle('hidden',s!==id);window.scrollTo({top:0,behavior:'instant'})}
+function slots(target){$(target).innerHTML=roles.map(([r,label],i)=>{const p=band[i];return `<div class="slot"><div class="role">${label}</div><div class="name ${p?'':'empty'}">${p?p.name:'Not chosen'}</div>${p?`<div class="band">${p.band}</div>`:''}</div>`}).join('')}
+function render(){const [key,label]=roles[round];const chosen=new Set(band.map(x=>x.name));const candidates=(key==='wildcard'?all:pool[key]).filter(p=>!chosen.has(p.name));options=randomTen(candidates);selected=null;$('roundLabel').textContent=`ROUND ${round+1} OF 5`;$('roundTitle').textContent=`Choose your ${label.toLowerCase()}`;$('progress').innerHTML=roles.map((_,i)=>`<i class="${i<round?'done':i===round?'active':''}"></i>`).join('');$('choices').innerHTML='';options.forEach((p,i)=>{const b=document.createElement('button');b.className='choice';b.type='button';b.innerHTML=`<strong></strong><small></small>`;b.querySelector('strong').textContent=p.name;b.querySelector('small').textContent=p.band;b.onclick=()=>{selected=i;document.querySelectorAll('.choice').forEach((e,j)=>e.classList.toggle('selected',i===j));$('confirm').disabled=false};$('choices').appendChild(b)});$('confirm').disabled=true;$('countLabel').textContent=`${band.length} / 5 selected`;slots('lineup')}
+function newGame(){round=0;band=[];render();show('game')}
+function score(){const pops=band.map(p=>p.pop).sort((a,b)=>b-a);const commercial=pops.reduce((s,v,i)=>s+v*[.39,.25,.17,.12,.07][i],0);const reputation=band.reduce((s,p)=>s+p.pop,0)/5;let pairs=0,same=0;for(let i=0;i<5;i++)for(let j=i+1;j<5;j++){pairs++;if(band[i].genre===band[j].genre)same++}const fit=same/pairs;const bands=band.map(p=>p.band);let shared=0;for(let i=0;i<5;i++)for(let j=i+1;j<5;j++)if(bands[i]===bands[j])shared++;const chemistry=Math.min(1,.36+fit*.47+shared*.12);const composite=.50*commercial+.20*reputation+.20*(60+40*fit)+.10*(chemistry*100);const attendance=Math.max(10000,Math.min(100000,Math.round((composite-52)*2150)));return {attendance,fit,chemistry,composite}}
+function end(){const s=score(),n=s.attendance,record=Math.max(n,best());saveBest(record);$('tickets').textContent=fmt(n);$('outcome').textContent=n===100000?'🎉 SOLD OUT!':n>=90000?'🔥 Almost Sold Out!':n>=75000?'🎤 Huge Crowd!':n>=50000?'🎸 Solid Turnout!':'🎵 Keep Rocking!';$('attendanceText').textContent=n===100000?'Every seat is filled. Your supergroup is legendary!':`${fmt(100000-n)} seats still available.`;$('percent').textContent=(n/1000).toFixed(1)+'%';$('bestResult').textContent=fmt(record);$('genreResult').textContent=s.fit>=.6?'Excellent':s.fit>=.3?'Good':s.fit>=.1?'Mixed':'Eclectic';$('chemResult').textContent=s.chemistry>=.8?'Excellent':s.chemistry>=.6?'Strong':s.chemistry>=.45?'Good':'Unpredictable';slots('resultLineup');show('result');requestAnimationFrame(()=>{$('fill').style.width=n/1000+'%'})}
+$('start').onclick=newGame;$('again').onclick=()=>{$('fill').style.width='0%';newGame()};$('confirm').onclick=()=>{if(selected===null)return;band.push(options[selected]);round++;if(round===5)end();else render()};$('share').onclick=async()=>{const content=`100K — Build the Ultimate Band\n${band.map((p,i)=>`${roles[i][1]}: ${p.name} — ${p.band}`).join('\n')}\nTickets sold: ${$('tickets').textContent} / 100,000`;try{await navigator.clipboard.writeText(content);$('share').textContent='✓ Copied!';setTimeout(()=>$('share').textContent='📋 Copy My Band & Score',1600)}catch{window.prompt('Copy your band:',content)}};if(best())$('bestIntro').textContent='Your personal best: '+fmt(best())+' tickets';
+</script></body></html>
